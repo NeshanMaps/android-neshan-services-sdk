@@ -1,0 +1,3 @@
+include ':servicessdk'
+include ':app'
+rootProject.name = "Sample"
