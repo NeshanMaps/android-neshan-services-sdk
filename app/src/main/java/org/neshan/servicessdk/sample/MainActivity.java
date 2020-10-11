@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        new NeshanSearch.Builder("service.PnRV9ocd8zm9QYYlJUNLJoAihE3hfy34WUZ6jcjr")
+        new NeshanSearch.Builder("YOUR_API_KEY")
                 .setLocation(new LatLng(32.12254,52.365644))
                 .setTerm("tehran")
                 .build()
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-        new NeshanDirection.Builder("service.VNlPhrWb3wYRzEYmstQh3GrAXyhyaN55AqUSRR3V",new LatLng(32.12254,52.365644),new LatLng(32.13254,52.364644))
+        new NeshanDirection.Builder("YOUR_API_KEY",new LatLng(32.12254,52.365644),new LatLng(32.13254,52.364644))
                 .setAlternative(true)
                 .setAvoidOddEvenZone(true)
                 .build()
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-        new NeshanGeoReverse.Builder("service.vXnkREhrjgSh3cxveK09jcwRFb4YiJRNGf7yTpZd",new LatLng(32.12254,52.365644))
+        new NeshanGeoReverse.Builder("YOUR_API_KEY",new LatLng(32.12254,52.365644))
                 .build()
                 .call(new Callback<NeshanGeoReverseResult>() {
                     @Override
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-        new NeshanMapMatching.Builder("service.vBVvOdBZubMJXcregZnD97DFwTvWotMU5HpUV1Tq",new ArrayList<>(Arrays.asList(new LatLng(36.299394,59.606211),new LatLng(36.297950,59.604258),new LatLng(36.297206,59.603507))))
+        new NeshanMapMatching.Builder("YOUR_API_KEY",new ArrayList<>(Arrays.asList(new LatLng(36.299394,59.606211),new LatLng(36.297950,59.604258),new LatLng(36.297206,59.603507))))
                 .build()
                 .call(new Callback<NeshanMapMatchingResult>() {
                     @Override
@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-        new NeshanDistanceMatrix.Builder("service.7EX7XINl7FNueW9rOuswkmv3MrteDRKKvHRsqFOy"
+        new NeshanDistanceMatrix.Builder("YOUR_API_KEY"
                 ,new ArrayList<>(Arrays.asList(new LatLng(36.299394,59.606211),new LatLng(36.297950,59.604258),new LatLng(36.297206,59.603507)))
                 ,new ArrayList<>(Arrays.asList(new LatLng(36.299394,59.606211),new LatLng(36.297950,59.604258),new LatLng(36.297206,59.603507))))
                 .build()
