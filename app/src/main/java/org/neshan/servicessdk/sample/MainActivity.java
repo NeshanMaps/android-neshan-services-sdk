@@ -25,6 +25,8 @@ import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
 
+    private String TAG="sample";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,12 +39,12 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void onResponse(Call<NeshanSearchResult> call, retrofit2.Response<NeshanSearchResult> response) {
-                        Log.d("aaaaaaa",response.body().toString());
+                        Log.d(TAG,response.body().toString());
                     }
 
                     @Override
                     public void onFailure(Call<NeshanSearchResult> call, Throwable t) {
-                        Log.d("aaaaaaa","ERROR");
+                        Log.d(TAG,"ERROR");
                     }
                 });
 
@@ -53,12 +55,12 @@ public class MainActivity extends AppCompatActivity {
                 .call(new Callback<NeshanDirectionResult>() {
                     @Override
                     public void onResponse(Call<NeshanDirectionResult> call, Response<NeshanDirectionResult> response) {
-                        Log.d("aaaaaaa",response.body().toString());
+                        Log.d(TAG,response.body().toString());
                     }
 
                     @Override
                     public void onFailure(Call<NeshanDirectionResult> call, Throwable t) {
-                        Log.d("aaaaaaa","Error");
+                        Log.d(TAG,"Error");
                     }
                 });
 
@@ -67,12 +69,12 @@ public class MainActivity extends AppCompatActivity {
                 .call(new Callback<NeshanGeoReverseResult>() {
                     @Override
                     public void onResponse(Call<NeshanGeoReverseResult> call, Response<NeshanGeoReverseResult> response) {
-                        Log.d("aaaaaaa",response.body().toString());
+                        Log.d(TAG,response.body().toString());
                     }
 
                     @Override
                     public void onFailure(Call<NeshanGeoReverseResult> call, Throwable t) {
-                        Log.d("aaaaaaa","Error");
+                        Log.d(TAG,"Error");
                     }
                 });
 
@@ -81,12 +83,12 @@ public class MainActivity extends AppCompatActivity {
                 .call(new Callback<NeshanMapMatchingResult>() {
                     @Override
                     public void onResponse(Call<NeshanMapMatchingResult> call, Response<NeshanMapMatchingResult> response) {
-                        Log.d("aaaaaaa",response.body().toString());
+                        Log.d(TAG,response.body().toString());
                     }
 
                     @Override
                     public void onFailure(Call<NeshanMapMatchingResult> call, Throwable t) {
-                        Log.d("aaaaaaa","Error");
+                        Log.d(TAG,"Error");
                     }
                 });
 
@@ -97,12 +99,12 @@ public class MainActivity extends AppCompatActivity {
                 .call(new Callback<NeshanDistanceMatrixResult>() {
                     @Override
                     public void onResponse(Call<NeshanDistanceMatrixResult> call, Response<NeshanDistanceMatrixResult> response) {
-                        Log.d("aaaaaaa",response.body().toString());
+                        Log.d(TAG,response.body().toString());
                     }
 
                     @Override
                     public void onFailure(Call<NeshanDistanceMatrixResult> call, Throwable t) {
-                        Log.d("aaaaaaa","Error");
+                        Log.d(TAG,"Error");
                     }
                 });
     }
